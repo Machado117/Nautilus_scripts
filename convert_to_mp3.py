@@ -1,5 +1,8 @@
 #!/usr/bin/python3
 __author__ = "Diogo Machado"
+"""
+dependencies : ffmpeg
+"""
 import script_helper
 import subprocess
 import time
