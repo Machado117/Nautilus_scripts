@@ -15,11 +15,7 @@ file_paths = script_helper.get_selected_files()
 files_not_converted = []
 for file in file_paths:
     file_name = os.path.basename(file)
-    extension_index = file_name.rfind(".")
-    if extension_index == -1:
-        output_file_name = file_name
-    else:
-        output_file_name = file_name[:extension_index]
+    output_file_name = os.path.splitext(file_name)[0]
     output_file_name_temp = output_file_name + ".mp3"
     i = 1
     while os.path.isfile(os.path.basename(output_file_name_temp)):
